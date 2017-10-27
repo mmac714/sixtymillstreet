@@ -13,9 +13,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+
 
 
  <!-- <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -277,18 +283,5 @@
 
 
 </div>
-
-
-<!--
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn button ">Contact</button>
-      </div>
-    </div>
-  </form>
-
-</div>
--->
 {% block content %}
 {% endblock content %}

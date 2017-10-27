@@ -49,7 +49,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
      # Alow all host headers.
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['fierce-thicket-38238.herokuapp.com']
 
     DEBUG = False
 
@@ -66,7 +66,7 @@ INSTALLED_APPS = [
     
     # Third party apps
     'bootstrap3',
-    
+
     # My apps
     'splash_page',
     ]
@@ -223,6 +223,9 @@ LOGIN_URL = '/users/login/'
 # Settings for django-bootstrap3
 BOOTSTRAP3 = {
     'include_jquery': True,
+    'jquery_url': '//code.jquery.com/jquery.min.js',
+    'base_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/',
+    'css_url': sm_config_dir,
     }
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
