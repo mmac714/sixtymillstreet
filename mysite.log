@@ -150,3 +150,59 @@
 [27/Oct/2017 14:47:04] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 200 568784
 [27/Oct/2017 14:47:05] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 200 1513779
 [27/Oct/2017 14:47:05] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 200 2016932
+[27/Oct/2017 17:53:05] INFO [django.server:124] "GET / HTTP/1.1" 200 10182
+[27/Oct/2017 17:53:05] DEBUG [django.template:925] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <module 'splash_page.urls' from '/Users/macbook/djangoProjects/Projects/SixtyMill_Repo/splash_page/urls.py'> (None:None) ^>, <RegexURLPattern home ^$>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/macbook/djangoProjects/Envs/smENV/lib/python3.5/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[27/Oct/2017 17:53:05] WARNING [django.request:152] Not Found: /favicon.ico
+[27/Oct/2017 17:53:05] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2128
+[27/Oct/2017 17:54:03] DEBUG [django.db.backends:91] (0.026) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[27/Oct/2017 17:54:03] DEBUG [django.db.backends:91] (0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[27/Oct/2017 17:54:05] DEBUG [django.db.backends:91] (0.008) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[27/Oct/2017 17:54:05] DEBUG [django.db.backends:91] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
