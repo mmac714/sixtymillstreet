@@ -30,7 +30,7 @@ BASE_DIR = SixtyMill_Repo_dir
 SECRET_KEY = '-@@6%l&x#!-v3!vj%faw6w)*)pvs=11$u3mn9+wc@e@3$c(-d8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -199,7 +199,6 @@ STATIC_URL = '/static/'
     # STATIC_URL is used when referring to the static files
     # located in STATIC_ROOT. If not "None", this will be used
     # as the base path for asset definitions (the Media class)
-    # and the staticfiles app.
 STATICFILES_DIRS = ((STATIC_ROOT + "/" + STATIC_URL),)
 # /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config/static
     # This setting defines the additional locations the staticfiles
@@ -212,7 +211,7 @@ STATICFILES_DIRS = ((STATIC_ROOT + "/" + STATIC_URL),)
 
 # Simplifies static file serving.
 # https://warehouse.python.org/project/whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
     # The file storage engine to use when collecting static files 
     # with the "collectstatic"  management command. This is for
     # serving static files from a cloud service or CDN.
