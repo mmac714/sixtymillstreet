@@ -49,7 +49,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
      # Alow all host headers.
-    ALLOWED_HOSTS = ['fierce-thicket-38238.herokuapp.com']
+    ALLOWED_HOSTS = ['*']
 
     DEBUG = False
 
