@@ -1,1 +1,0 @@
-This file ensures that the static folder will be added to the project.

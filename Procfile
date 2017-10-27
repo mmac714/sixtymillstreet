@@ -1,1 +1,1 @@
-web: gunicorn sixty_mill.wsgi --log-file -
+web: gunicorn sm_config.wsgi --log-file -
