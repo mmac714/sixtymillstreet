@@ -1,56 +1,13 @@
-[27/Oct/2017 22:04:08] INFO [django.server:124] "GET / HTTP/1.1" 200 10148
-[27/Oct/2017 22:04:08] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:08] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:08] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 304 0
-[27/Oct/2017 22:04:08] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 304 0
-[27/Oct/2017 22:04:08] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 304 0
-[27/Oct/2017 22:04:09] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:09] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:18] INFO [django.server:124] "GET / HTTP/1.1" 200 10148
-[27/Oct/2017 22:04:18] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:18] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:18] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:18] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:22] INFO [django.server:124] "GET / HTTP/1.1" 200 10148
-[27/Oct/2017 22:04:22] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:22] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:22] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:22] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:30] INFO [django.server:124] "GET / HTTP/1.1" 200 10148
-[27/Oct/2017 22:04:30] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:30] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:30] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:30] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:36] INFO [django.server:124] "GET / HTTP/1.1" 200 10148
-[27/Oct/2017 22:04:36] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:36] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:37] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 200 568784
-[27/Oct/2017 22:04:37] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:04:37] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:04:37] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 200 2016932
-[27/Oct/2017 22:04:37] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 200 1513779
-[27/Oct/2017 22:04:38] WARNING [django.request:152] Not Found: /favicon.ico
-[27/Oct/2017 22:04:38] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 85
-[27/Oct/2017 22:05:02] INFO [django.server:124] "GET / HTTP/1.1" 200 10149
-[27/Oct/2017 22:05:02] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:05:02] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:05:02] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 200 568784
-[27/Oct/2017 22:05:03] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 200 2016932
-[27/Oct/2017 22:05:03] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:05:03] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:05:03] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 200 1513779
-[27/Oct/2017 22:05:03] WARNING [django.request:152] Not Found: /favicon.ico
-[27/Oct/2017 22:05:03] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 85
-[27/Oct/2017 22:05:21] INFO [django.server:124] "GET / HTTP/1.1" 200 10147
-[27/Oct/2017 22:05:21] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:05:21] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:05:22] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:05:22] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:06:42] INFO [django.server:124] "GET / HTTP/1.1" 200 10145
-[27/Oct/2017 22:06:43] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:06:43] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 304 0
-[27/Oct/2017 22:06:43] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
-[27/Oct/2017 22:06:43] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 304 0
-[27/Oct/2017 22:06:43] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 304 0
-[27/Oct/2017 22:06:43] WARNING [django.request:152] Not Found: /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config
-[27/Oct/2017 22:06:43] WARNING [django.server:124] "GET /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config HTTP/1.1" 404 136
+[28/Oct/2017 16:47:59] INFO [django.server:124] "GET / HTTP/1.1" 200 10145
+[28/Oct/2017 16:47:59] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 200 568784
+[28/Oct/2017 16:47:59] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 200 1513779
+[28/Oct/2017 16:47:59] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 200 2016932
+[28/Oct/2017 16:51:59] INFO [django.server:124] "GET / HTTP/1.1" 200 10145
+[28/Oct/2017 16:51:59] INFO [django.server:124] "GET /static/sixty_mill/testphoto2.jpg HTTP/1.1" 304 0
+[28/Oct/2017 16:51:59] INFO [django.server:124] "GET /static/sixty_mill/testphoto1.jpg HTTP/1.1" 304 0
+[28/Oct/2017 16:51:59] INFO [django.server:124] "GET /static/sixty_mill/testphoto3.jpg HTTP/1.1" 304 0
+[28/Oct/2017 16:52:18] INFO [django.server:124] "GET / HTTP/1.1" 200 10145
+[28/Oct/2017 17:30:47] INFO [django.server:124] "GET / HTTP/1.1" 200 10305
+[28/Oct/2017 17:32:03] INFO [django.server:124] "GET / HTTP/1.1" 200 10305
+[28/Oct/2017 17:32:06] INFO [django.server:124] "GET / HTTP/1.1" 200 10305
+[28/Oct/2017 17:32:14] INFO [django.server:124] "GET / HTTP/1.1" 200 10305

@@ -15,12 +15,11 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# Directory variables
-SixtyMill_Repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sm_config_dir = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# PROJECT_ROOT is the directory for settings.py. Sixty_mill_Repo
 
-PROJECT_ROOT = sm_config_dir
-BASE_DIR = SixtyMill_Repo_dir
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR is the directory for manage.py. sm_config
 
 
 # Quick-start development settings - unsuitable for production
@@ -66,6 +65,7 @@ INSTALLED_APPS = [
     
     # Third party apps
     'bootstrap3',
+    'storages',
 
     # My apps
     'splash_page',
@@ -172,7 +172,7 @@ USE_TZ = True
     # Files are copied if their timestamp is greater than the 
     # timestamp of the file in STATIC_ROOT.
 
-    # The default is to look in all locaations defined in 
+    # The default is to look in all locations defined in 
     # STATICFILES_DIRS and in the 'static' directory of apps
     # specified by the INSTALLED_APPS.
 
@@ -191,20 +191,20 @@ USE_TZ = True
     # for a full list of options run
     # python manage.py collectstatic --help
 
-STATIC_ROOT = sm_config_dir
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     # STATIC_ROOT is the absolute path to the directory 
-    # where collectstatic will collect static files for 
+    # where collectstatic will put static files for 
     # deployment.
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
     # STATIC_URL is used when referring to the static files
     # located in STATIC_ROOT. If not "None", this will be used
     # as the base path for asset definitions (the Media class)
-STATICFILES_DIRS = ((STATIC_ROOT + "/" + STATIC_URL),)
+# STATICFILES_DIRS = (os.path.join(BASE_DIR,'splash_page/static'),)
 # /Users/macbook/djangoProjects/Projects/SixtyMill_Repo/sm_config/static
     # This setting defines the additional locations the staticfiles
     # app will traverse if the FileSystemFinder finder is enabled,
-    # for example if you use the collectstatic ot findstatic 
-    # management command to us the static file serving view. 
+    # for example if you use the collectstatic to findstatic 
+    # management command to use the static file serving view. 
     # this should be a set to a list of strings that contain the 
     # full paths to your additional files directories.
     # This can be a tuple of multiple directories.
@@ -212,10 +212,30 @@ STATICFILES_DIRS = ((STATIC_ROOT + "/" + STATIC_URL),)
 # Simplifies static file serving.
 # https://warehouse.python.org/project/whitenoise
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'storages.backends.S3boto.s3BotoStorage'
     # The file storage engine to use when collecting static files 
     # with the "collectstatic"  management command. This is for
     # serving static files from a cloud service or CDN.
 
+
+AWS_ACCESS_KEY_ID = 'AKIAJIFNMMQXKQ7WR6SQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'sixtymillphotos'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'splash_page/static'),
+]
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+#----------------------------------------------------------
+#----------------------------------------------------------
 
 # My settings
 LOGIN_URL = '/users/login/'
@@ -225,7 +245,6 @@ BOOTSTRAP3 = {
     'include_jquery': True,
     'jquery_url': '//code.jquery.com/jquery.min.js',
     'base_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/',
-    'css_url': sm_config_dir,
     }
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
