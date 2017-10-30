@@ -14,6 +14,13 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+# settings.py
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # PROJECT_ROOT is the directory for settings.py. Sixty_mill_Repo
@@ -25,10 +32,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
+# Variables
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-@@6%l&x#!-v3!vj%faw6w)*)pvs=11$u3mn9+wc@e@3$c(-d8'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = False
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -79,10 +89,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # Simplified static file serviing
-    # https://warehouse.python.org/project/whitenoise
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'sm_config.urls'
@@ -111,12 +117,17 @@ import dj_database_url
 
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# Database Variables
+DB_NAME = os.environ.get("DB_NAME")
+DB_USER = os.environ.get("DB_USER")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sixtymill_db',
-        'USER': 'Michael',
-        'PASSWORD': '',
+        'NAME': DB_NAME, #'sixtymill_db',
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
         'HOST': 'localhost',
         'PORT': 5432
     }
@@ -210,19 +221,17 @@ USE_TZ = True
     # This can be a tuple of multiple directories.
 
 # Simplifies static file serving.
-# https://warehouse.python.org/project/whitenoise
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-# STATICFILES_STORAGE = 'storages.backends.S3boto.s3BotoStorage'
     # The file storage engine to use when collecting static files 
     # with the "collectstatic"  management command. This is for
     # serving static files from a cloud service or CDN.
 
+# AWS Variables
 
-AWS_ACCESS_KEY_ID = 'AKIAJIFNMMQXKQ7WR6SQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'sixtymillphotos'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_CUSTOM_DOMAIN = os.environ.get("AWS_S3_CUSTOM_DOMAIN")
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
@@ -232,7 +241,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'splash_page/static'),
 ]
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = os.environ.get("STATICFILES_STORAGE")
 
 #----------------------------------------------------------
 #----------------------------------------------------------
@@ -250,9 +259,9 @@ BOOTSTRAP3 = {
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Email configurations
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST = os.environ.get("EMAIL_HOST")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
