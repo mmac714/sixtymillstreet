@@ -58,7 +58,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
      # Alow all host headers.
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['[fierce-thicket-38238].herokuapp.com']
 
     DEBUG = False
 
@@ -227,6 +227,7 @@ USE_TZ = True
     # serving static files from a cloud service or CDN.
 
 # AWS Variables
+
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
