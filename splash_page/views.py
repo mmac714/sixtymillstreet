@@ -20,8 +20,8 @@ def home(request):
 
 		subject = 'Sixty Mill Street - Thank you for contacting us!'
 		message = 'We will reach out to you within one business day. \
-		If you would like to sooner, please respond to this email or call \
-		us at 817-629-3670.'
+		You may respond to this email or call us at 817-629-3670 if you \
+		have additional questions.' 
 		sender = 'michael@sixtymill.com'
 		to = [cd['to']]
 

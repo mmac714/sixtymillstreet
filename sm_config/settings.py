@@ -23,10 +23,11 @@ load_dotenv(dotenv_path)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-# PROJECT_ROOT is the directory for settings.py. Sixty_mill_Repo
+# PROJECT_ROOT is the directory for settings.py. sm_config
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# BASE_DIR is the directory for manage.py. sm_config
+# BASE_DIR is the directory for manage.py. SixtyMill_repo
 
 
 # Quick-start development settings - unsuitable for production
