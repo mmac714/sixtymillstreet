@@ -51,7 +51,7 @@ if os.getcwd() == '/app':
     # /Users/macbook/djangoProjects/sixtymill/sixty_mill/sixty_mill
 
     import dj_database_url
-    DEBUG = config('DEBUG', default=False, cast=bool)
+    DEBUG = False
     DATABASES = {
         'default': dj_database_url.config(default='DATABASE_URL')
      }
