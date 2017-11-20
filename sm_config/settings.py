@@ -51,6 +51,7 @@ if os.getcwd() == '/app':
     # /Users/macbook/djangoProjects/sixtymill/sixty_mill/sixty_mill
 
     import dj_database_url
+    DEBUG = config('DEBUG', default=False, cast=bool)
     DATABASES = {
         'default': dj_database_url.config(default='DATABASE_URL')
      }
@@ -60,8 +61,6 @@ if os.getcwd() == '/app':
 
      # Alow all host headers.
     ALLOWED_HOSTS = ['www.sixtymill.com', 'sixtymill.com', 'fierce-thicket-38238.herokuapp.com']
-
-    DEBUG = False
 
     SITE_ID = 1
 
