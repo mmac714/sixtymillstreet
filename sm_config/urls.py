@@ -15,8 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
+
+from sitemaps import StaticSitemap
+
+# Dictionary containing sitemap classes
+sitemaps = {
+    'static': StaticSitemap(),
+}
+
 
 urlpatterns = [
     url(r'^', include('splash_page.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    name='django.contrib.sitemaps.views.sitemap')
 	]

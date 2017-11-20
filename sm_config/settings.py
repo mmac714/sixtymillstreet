@@ -63,6 +63,7 @@ if os.getcwd() == '/app':
 
     DEBUG = False
 
+    SITE_ID = 1
 
 # Application definition
 
@@ -73,6 +74,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Sitemap
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
     
     # Third party apps
     'bootstrap3',
@@ -268,6 +274,8 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+SITE_ID = 1
 
 # Logging
 LOGGING = {
